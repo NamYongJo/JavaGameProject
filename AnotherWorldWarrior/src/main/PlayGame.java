@@ -32,14 +32,14 @@ public class PlayGame {
 		System.out.print("당신의 이름 : ");
 		name = scan.nextLine();
 		level = 1;
-		hp = 80;
-		mp = 20;
+		hp = 100;
+		mp = 25;
 		power = 10;
 		def = 10;
 		money = 0;
 		exp = 0;
 
-		Warrior vm = new Warrior(name, level, hp, mp, power, def, money, exp);
+		Warrior warrior = new Warrior(name, level, hp, mp, power, def, money, exp);
 
 		System.out.println("당신은 이세계에 초대되셨습니다.");
 		System.out.println("몬스터를 사냥하여 레벨을 올리고");
@@ -50,7 +50,7 @@ public class PlayGame {
 			System.out.println("1.상태창\t 2.장비\t 3.상점\t 4.전투");
 			choiceNum = scan.nextLine();
 			if (choiceNum.equals("1")) {
-				vm.showInfo();
+				warrior.showInfo();
 			} else if (choiceNum.equals("2")) {
 
 			} else if (choiceNum.equals("3")) {
@@ -71,13 +71,21 @@ public class PlayGame {
 					System.out.println("＝┃ニニフ 전투 상대");
 					monster.showInfo();
 				} else if (choiceNum.equals("2")) {
-					Goblin goblin = new Goblin("고블린", 500, 0, 5, 50, 10, 100, 100);
+					monster = new Goblin("고블린", 500, 0, 5, 50, 10, 50, 50);
+					System.out.println("＝┃ニニフ 전투 상대");
+					monster.showInfo();
 				} else if (choiceNum.equals("3")) {
-					Orc orc = new Orc("오크", 800, 0, 10, 80, 20, 500, 500);
+					monster = new Orc("오크", 800, 0, 10, 80, 20, 100, 100);
+					System.out.println("＝┃ニニフ 전투 상대");
+					monster.showInfo();
 				} else if (choiceNum.equals("4")) {
-					Skeleton skeleton = new Skeleton("스켈레톤", 1000, 0, 15, 100, 50, 1000, 1000);
+					monster = new Skeleton("스켈레톤", 1000, 0, 15, 100, 50, 250, 250);
+					System.out.println("＝┃ニニフ 전투 상대");
+					monster.showInfo();
 				} else if (choiceNum.equals("5")) {
-					Imp imp = new Imp("임프", 1500, 0, 20, 120, 70, 1500, 1500);
+					monster = new Imp("임프", 1500, 0, 20, 120, 70, 500, 500);
+					System.out.println("＝┃ニニフ 전투 상대");
+					monster.showInfo();
 				} else if (choiceNum.equals("6")) {
 					break;
 				} else if (choiceNum.equals("0")) {
@@ -87,30 +95,37 @@ public class PlayGame {
 					System.out.println("잘못된 선택입니다.");
 				}
 				while (true) {
-					System.out.println(vm.name + "의 차례");
-					monster.attacked(vm.attack());
+					System.out.println(warrior.name + "의 차례");
+					monster.attacked(warrior.attack());
 					System.out.println(monster.name + "의 남은 체력: " + monster.hp);
 
 					if (monster.hp <= 0) {
 						System.out.println(monster.name + " 토벌 성공!");
-						vm.exp += monster.exp;
-						vm.money += monster.money;
+						warrior.exp += monster.exp;
+						warrior.money += monster.money;
 						break;
 					}
 
 					System.out.println(monster.name + "의 공격!");
-					vm.attacked(monster.attack());
-					System.out.println(vm.name + "의 남은 체력: " + vm.hp);
+					warrior.attacked(monster.attack());
+					System.out.println(warrior.name + "의 남은 체력: " + warrior.hp);
 
-					if (vm.hp <= 0) {
-						System.out.println(vm.name + " 사망");
-						vm.hp = 1;
-						System.out.println(vm.hp + "의 체력으로 부활합니다.");
+					if (warrior.hp <= 0) {
+						System.out.println(warrior.name + " 사망");
+						warrior.hp = 1;
+						System.out.println(warrior.hp + "의 체력으로 부활합니다.");
 						break;
 					}
 				}
 			} else {
 				System.out.println("잘못된 선택입니다.");
+			}
+			if (warrior.exp >= warrior.level * 80) {
+				warrior.level += 1;
+				System.out.println(warrior.name + "의 레벨이 " + warrior.level + "이 되었습니다.");
+				warrior.money += warrior.level * 50;
+				System.out.println("레벨업 보상으로 " + warrior.level * 50 + "원을 받았습니다.");
+				warrior.exp = 0;
 			}
 		}
 
