@@ -1,6 +1,8 @@
 package Characters;
 
-public class Character {
+import store.PotionStore;
+
+public class Character{
 
 	public String name = ""; //이름
 	public int level = 0; //레벨
