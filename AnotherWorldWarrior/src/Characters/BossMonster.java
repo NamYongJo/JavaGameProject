@@ -1,13 +1,12 @@
 package Characters;
 
-public class BossMonster extends Character{
-	
+public class BossMonster extends Character {
+
 	public BossMonster() {
-		
+
 	}
-	
-	public BossMonster(String name, int hp, int mp, int level, 
-			int power, int def, int money, int exp) {
+
+	public BossMonster(String name, int hp, int mp, int level, int power, int def, int money, int exp) {
 		this.name = name;
 		this.hp = hp;
 		this.mp = mp;
@@ -17,7 +16,5 @@ public class BossMonster extends Character{
 		this.money = money;
 		this.exp = exp;
 	}
-	
-	
-	
+
 }

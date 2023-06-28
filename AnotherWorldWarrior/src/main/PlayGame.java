@@ -130,7 +130,6 @@ public class PlayGame {
 					monster.showInfo();
 				} else if (choiceNum.equals("6")) {
 					bossMonster = new Lucifer("마왕 루시퍼(보스)", 4000, 50, 30, 50, 30, 5000, 5000);
-//					bossMonster = new Lucifer("마왕 루시퍼(보스)", 100, 50, 30, 50, 30, 5000, 5000);
 					System.out.println("⚔️ 전투 상대 ⚔️");
 					bossMonster.showInfo();
 				} else if (choiceNum.equals("0")) {
@@ -152,10 +151,11 @@ public class PlayGame {
 						if (choiceNum.equals("1")) {
 							bossMonster.attacked(hero.attack());
 
-							if (bossMonster.hp >= 0) {
+							if (bossMonster.hp <= 0) {
 								bossMonster.hp = 0;
 							}
 							System.out.println(bossMonster.name + "의 남은 체력: " + bossMonster.hp);
+							System.out.println(bossMonster.name + "의 남은 마나: " + bossMonster.mp);
 							System.out.println("==============================>");
 
 							if (bossMonster.hp == 0) {
@@ -173,6 +173,7 @@ public class PlayGame {
 								hero.hp = 0;
 							}
 							System.out.println(hero.name + "의 남은 체력: " + hero.hp);
+							System.out.println(hero.name + "의 남은 마나: " + hero.mp);
 							System.out.println("==============================>");
 
 							if (hero.hp == 0) {
@@ -197,7 +198,7 @@ public class PlayGame {
 						if (choiceNum.equals("1")) {
 							monster.attacked(hero.attack());
 
-							if (monster.hp >= 0) {
+							if (monster.hp <= 0) {
 								monster.hp = 0;
 							}
 							System.out.println(monster.name + "의 남은 체력: " + monster.hp);
@@ -217,6 +218,7 @@ public class PlayGame {
 								hero.hp = 0;
 							}
 							System.out.println(hero.name + "의 남은 체력: " + hero.hp);
+							System.out.println(hero.name + "의 남은 마나: " + hero.mp);
 							System.out.println("==============================>");
 
 							if (hero.hp == 0) {

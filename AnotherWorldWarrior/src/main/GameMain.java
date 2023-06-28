@@ -6,9 +6,9 @@ public class GameMain {
 		// TODO Auto-generated method stub
 
 		PlayGame playGame = new PlayGame();
-		
+
 		playGame.GameStart();
-		
+
 	}
 
 }

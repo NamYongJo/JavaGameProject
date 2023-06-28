@@ -109,7 +109,7 @@ public class Hero extends Character {
 		System.out.println("│6.상급 마나 포션: " + potionMap.get("상급 마나 포션") + "\t│");
 		System.out.println("│0.돌아가기" + "\t\t│");
 		System.out.println("╚───────────────────────╝");
-		
+
 		System.out.print("선택: ");
 		choiceNum = scan.nextLine();
 

@@ -1,9 +1,8 @@
 package Characters;
 
-public class Imp extends Monster{
-	
-	public Imp(String name, int hp, int mp, int level, 
-			int power, int def, int money, int exp) {
+public class Imp extends Monster {
+
+	public Imp(String name, int hp, int mp, int level, int power, int def, int money, int exp) {
 		this.name = name;
 		this.hp = hp;
 		this.mp = mp;
@@ -13,7 +12,5 @@ public class Imp extends Monster{
 		this.money = money;
 		this.exp = exp;
 	}
-	
-	
-	
+
 }
