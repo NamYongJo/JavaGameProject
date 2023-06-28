@@ -14,16 +14,16 @@ public class Character{
 	public int exp = 0; //경험치
 	
 	public void showInfo() {
-		System.out.println("┌───────────────┐");
-		System.out.println("│" + "이름: " + name + "  \t│");
-		System.out.println("│" + "레벨: " + level + "  \t│");
-		System.out.println("│" + "체력: " + hp + "  \t│");
-		System.out.println("│" + "마나: " + mp + "  \t│");
-		System.out.println("│" + "공격력: " + power + "  \t│");
-		System.out.println("│" + "방어력: " + def + "  \t│");
-		System.out.println("│" + "보유 금액: " + money + "  \t│");
-		System.out.println("│" + "경험치: " + exp + "  \t│");
-		System.out.println("└───────────────┘");
+		System.out.println("╔───────────────────────╗");
+		System.out.println("│" + "이름: " + name + " \t\t│");
+		System.out.println("│" + "레벨: " + level + " \t\t│");
+		System.out.println("│" + "체력: " + hp + " \t\t│");
+		System.out.println("│" + "마나: " + mp + " \t\t│");
+		System.out.println("│" + "공격력: " + power + " \t\t│");
+		System.out.println("│" + "방어력: " + def + " \t\t│");
+		System.out.println("│" + "보유 금액: " + money + " \t\t│");
+		System.out.println("│" + "경험치: " + exp + " \t\t│");
+		System.out.println("╚───────────────────────╝");
 	};
 	
 	public int attack() {

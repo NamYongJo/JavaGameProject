@@ -3,7 +3,7 @@ package Characters;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Lucifer extends Monster{
+public class Lucifer extends BossMonster{
 	
 	public Lucifer(String name, int hp, int mp, int level, 
 			int power, int def, int money, int exp) {
