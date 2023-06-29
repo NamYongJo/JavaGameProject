@@ -31,7 +31,8 @@ public class PotionStore {
 		String ChoiceNum = "";
 		int price = 0;
 
-		System.out.println("1.하급 포션(30골드)\t2.중급 포션(50골드)\t3.상급 포션(100골드)");
+		System.out.println("1.하급 포션(30골드) \t2.중급 포션(50골드) \t3.상급 포션(100골드) \t4.나가기");
+		System.out.print("선택: ");
 		ChoiceNum = scan.nextLine();
 		if (ChoiceNum.equals("1")) {
 			price = lowClassHpPotion;
@@ -60,8 +61,13 @@ public class PotionStore {
 			} else {
 				System.out.println("잔액이 부족합니다.");
 			}
+		} else if (ChoiceNum.equals("4")) {
+			System.out.println("상점을 나왔습니다.");
 		} else {
-			System.out.println("잘못된 입력입니다.");
+			System.out.println("대화가 통하지 않아 점장에게 쫓겨났습니다.");
+			System.out.println("╔───────────────────────────────╗");
+			System.out.println("│점장: 국어 공부나 더 하고 오라고 친구~\t│");
+			System.out.println("╚───────────────────────────────╝");
 		}
 
 		return money;
@@ -72,7 +78,8 @@ public class PotionStore {
 		String ChoiceNum = "";
 		int price = 0;
 
-		System.out.println("1.하급 포션(30골드)\t2.중급 포션(50골드)\t3.상급 포션(100골드)");
+		System.out.println("1.하급 포션(30골드) \t2.중급 포션(50골드) \t3.상급 포션(100골드) \t4.나가기");
+		System.out.print("선택: ");
 		ChoiceNum = scan.nextLine();
 		if (ChoiceNum.equals("1")) {
 			price = lowClassMpPotion;
@@ -101,8 +108,13 @@ public class PotionStore {
 			} else {
 				System.out.println("잔액이 부족합니다.");
 			}
+		} else if (ChoiceNum.equals("4")) {
+			System.out.println("상점을 나왔습니다.");
 		} else {
-			System.out.println("잘못된 입력입니다.");
+			System.out.println("대화가 통하지 않아 점장에게 쫓겨났습니다.");
+			System.out.println("╔───────────────────────────────╗");
+			System.out.println("│점장: 국어 공부나 더 하고 오라고 친구~\t│");
+			System.out.println("╚───────────────────────────────╝");
 		}
 
 		return money;

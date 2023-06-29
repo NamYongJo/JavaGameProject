@@ -1,7 +1,5 @@
 package characters;
 
-import store.PotionStore;
-
 public class Character {
 
 	public String name = ""; // 이름
@@ -21,7 +19,7 @@ public class Character {
 		System.out.println("│" + "마나: " + mp + " \t\t│");
 		System.out.println("│" + "공격력: " + power + " \t\t│");
 		System.out.println("│" + "방어력: " + def + " \t\t│");
-		System.out.println("│" + "보유 금액: " + money + " \t\t│");
+		System.out.println("│" + "보유 골드: " + money + " \t\t│");
 		System.out.println("│" + "경험치: " + exp + " \t\t│");
 		System.out.println("╚───────────────────────╝");
 	};

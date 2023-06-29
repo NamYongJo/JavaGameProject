@@ -122,6 +122,10 @@ public class Hero extends Character {
 				if (maxHpMpArr[0] <= hp) {
 					System.out.println("체력이 모두 회복되었습니다.");
 					hp = getHp();
+				} else {
+					System.out.println("체력이 100 회복되었습니다.");
+					System.out.println("현재 체력: " + hp);
+					System.out.println("현재 마나: " + mp);
 				}
 			} else {
 				System.out.println("포션이 부족합니다.");
@@ -133,6 +137,10 @@ public class Hero extends Character {
 				if (maxHpMpArr[0] <= hp) {
 					System.out.println("체력이 모두 회복되었습니다.");
 					hp = getHp();
+				} else {
+					System.out.println("체력이 300 회복되었습니다.");
+					System.out.println("현재 체력: " + hp);
+					System.out.println("현재 마나: " + mp);
 				}
 			} else {
 				System.out.println("포션이 부족합니다.");
@@ -144,6 +152,10 @@ public class Hero extends Character {
 				if (maxHpMpArr[0] <= hp) {
 					System.out.println("체력이 모두 회복되었습니다.");
 					hp = getHp();
+				} else {
+					System.out.println("체력이 500 회복되었습니다.");
+					System.out.println("현재 체력: " + hp);
+					System.out.println("현재 마나: " + mp);
 				}
 			} else {
 				System.out.println("포션이 부족합니다.");
@@ -155,6 +167,10 @@ public class Hero extends Character {
 				if (maxHpMpArr[1] <= mp) {
 					System.out.println("마나가 모두 회복되었습니다.");
 					mp = getMp();
+				} else {
+					System.out.println("마나가 10 회복되었습니다.");
+					System.out.println("현재 체력: " + hp);
+					System.out.println("현재 마나: " + mp);
 				}
 			} else {
 				System.out.println("포션이 부족합니다.");
@@ -166,6 +182,10 @@ public class Hero extends Character {
 				if (maxHpMpArr[1] <= mp) {
 					System.out.println("마나가 모두 회복되었습니다.");
 					mp = getMp();
+				} else {
+					System.out.println("마나가 30 회복되었습니다.");
+					System.out.println("현재 체력: " + hp);
+					System.out.println("현재 마나: " + mp);
 				}
 			} else {
 				System.out.println("포션이 부족합니다.");
@@ -177,6 +197,10 @@ public class Hero extends Character {
 				if (maxHpMpArr[1] <= mp) {
 					System.out.println("마나가 모두 회복되었습니다.");
 					mp = getMp();
+				} else {
+					System.out.println("마나가 50 회복되었습니다.");
+					System.out.println("현재 체력: " + hp);
+					System.out.println("현재 마나: " + mp);
 				}
 			} else {
 				System.out.println("포션이 부족합니다.");

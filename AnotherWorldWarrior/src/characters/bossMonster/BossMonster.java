@@ -21,7 +21,7 @@ public class BossMonster extends Character {
 	
 	public void gameEnd() {
 		System.out.println("╔───────────────────────────────╗");
-		System.out.println("│마왕 루시퍼가 힘을 잃어 봉인되었습니다.\t│");
+		System.out.println("│마왕이 힘을 잃어 봉인되었습니다.\t│");
 		System.out.println("│당신은 이 세계를 구한 영웅입니다!\t│");
 		System.out.println("│당신을 원래 세계로 보내드리겠습니다!\t│");
 		System.out.println("╚───────────────────────────────╝");

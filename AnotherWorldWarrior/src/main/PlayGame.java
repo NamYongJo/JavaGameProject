@@ -70,6 +70,7 @@ public class PlayGame {
 				System.out.println("│점장: 어서오게 오늘은 어떤 물건을 사러 왔는가?\t│");
 				System.out.println("╚───────────────────────────────────────╝");
 				System.out.println("1.체력 포션\t2.마나 포션\t3.돌아가기");
+				System.out.print("선택: ");
 				choiceNum = scan.nextLine();
 				if (choiceNum.equals("1")) {
 					hero.money = potionStore.buyHpPotion(hero.money);
@@ -78,14 +79,13 @@ public class PlayGame {
 					hero.money = potionStore.buyMpPotion(hero.money);
 					hero.setPotionMap(potionStore.getPotionMap());
 				} else if (choiceNum.equals("3")) {
-					System.out.println("이전 선택지로 돌아갑니다.");
+					System.out.println("상점을 나왔습니다.");
 					continue;
 				} else {
 					System.out.println("대화가 통하지 않아 점장에게 쫓겨났습니다.");
 					System.out.println("╔───────────────────────────────╗");
 					System.out.println("│점장: 국어 공부나 더 하고 오라고 친구~\t│");
 					System.out.println("╚───────────────────────────────╝");
-
 				}
 			} else if (choiceNum.equals("3")) {
 				Monster monster = new Monster();
@@ -126,8 +126,8 @@ public class PlayGame {
 					System.out.println("⚔️ 전투 상대 ⚔️");
 					monster.showInfo();
 				} else if (choiceNum.equals("6")) {
-//					bossMonster = new Lucifer("루시퍼", 4000, 50, 30, 50, 30, 5000, 5000);
-					bossMonster = new Lucifer("루시퍼", 50, 50, 30, 50, 30, 5000, 5000);
+					bossMonster = new Lucifer("루시퍼", 3000, 50, 30, 40, 30, 5000, 5000);
+//					bossMonster = new Lucifer("루시퍼", 50, 50, 30, 50, 30, 5000, 5000);
 					System.out.println("⚔️ 전투 상대 ⚔️");
 					bossMonster.showInfo();
 				} else if (choiceNum.equals("0")) {
@@ -184,7 +184,8 @@ public class PlayGame {
 							hero.takePotion();
 							potionStore.setPotionMap(hero.getPotionMap());
 						}
-					} else {
+					} else if (tempNum.equals("1") || tempNum.equals("2") ||
+							tempNum.equals("3") || tempNum.equals("4") || tempNum.equals("5")) {
 						System.out.println("╔───────────────╗");
 						System.out.println("│" + hero.name + "의 차례\t│");
 						System.out.println("│1.공격\t\t│");
@@ -230,6 +231,8 @@ public class PlayGame {
 							potionStore.setPotionMap(hero.getPotionMap());
 						}
 
+					} else {
+						break;
 					}
 
 				}
@@ -238,7 +241,8 @@ public class PlayGame {
 				hero.hp = hero.getHp();
 				hero.mp = hero.getMp();
 			} else {
-				System.out.println("잘못된 선택입니다.");
+				System.out.println("잘못된 입력입니다.");
+				System.out.println("마을로 돌아갑니다.");
 			}
 
 			if (hero.exp >= hero.level * 80) {
