@@ -2,8 +2,8 @@ package main;
 
 import java.util.Scanner;
 
-import characters.bossMonster.BossMonster;
-import characters.bossMonster.Lucifer;
+import characters.boss.BossMonster;
+import characters.boss.Lucifer;
 import characters.hero.Hero;
 import characters.monster.Goblin;
 import characters.monster.Imp;
@@ -183,9 +183,11 @@ public class PlayGame {
 						} else if (choiceNum.equals("2")) {
 							hero.takePotion();
 							potionStore.setPotionMap(hero.getPotionMap());
+						} else {
+							System.out.println("잘못된 입력입니다.");
 						}
-					} else if (tempNum.equals("1") || tempNum.equals("2") ||
-							tempNum.equals("3") || tempNum.equals("4") || tempNum.equals("5")) {
+					} else if (tempNum.equals("1") || tempNum.equals("2") || tempNum.equals("3") 
+							|| tempNum.equals("4") || tempNum.equals("5")) {
 						System.out.println("╔───────────────╗");
 						System.out.println("│" + hero.name + "의 차례\t│");
 						System.out.println("│1.공격\t\t│");
@@ -229,6 +231,8 @@ public class PlayGame {
 						} else if (choiceNum.equals("2")) {
 							hero.takePotion();
 							potionStore.setPotionMap(hero.getPotionMap());
+						} else {
+							System.out.println("잘못된 입력입니다.");
 						}
 
 					} else {
@@ -237,12 +241,13 @@ public class PlayGame {
 
 				}
 			} else if (choiceNum.equals("4")) {
-				System.out.println("여신의 가호로 체력과 마나가 모두 회복 되었습니다.");
+				System.out.println(" ╔───────────────────────────────────────╗");
+				System.out.println("ε│ 여신의 가호로 체력과 마나가 모두 회복 되었습니다.\t │з");
+				System.out.println(" ╚───────────────────────────────────────╝");
 				hero.hp = hero.getHp();
 				hero.mp = hero.getMp();
 			} else {
 				System.out.println("잘못된 입력입니다.");
-				System.out.println("마을로 돌아갑니다.");
 			}
 
 			if (hero.exp >= hero.level * 80) {

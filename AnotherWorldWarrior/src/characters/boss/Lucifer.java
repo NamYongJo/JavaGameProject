@@ -1,4 +1,4 @@
-package characters.bossMonster;
+package characters.boss;
 
 import java.util.Random;
 import java.util.Scanner;

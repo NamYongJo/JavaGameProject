@@ -31,7 +31,12 @@ public class PotionStore {
 		String ChoiceNum = "";
 		int price = 0;
 
-		System.out.println("1.하급 포션(30골드) \t2.중급 포션(50골드) \t3.상급 포션(100골드) \t4.나가기");
+		System.out.println("╔───────────────────────────────╗");
+		System.out.println("│1.하급 포션(체력 100회복): 30골드\t│");
+		System.out.println("│2.중급 포션(체력 300회복): 50골드\t│");
+		System.out.println("│3.상급 포션(체력 500회복): 100골드\t│");
+		System.out.println("│4.나가기\t\t\t\t│");
+		System.out.println("╚───────────────────────────────╝");
 		System.out.print("선택: ");
 		ChoiceNum = scan.nextLine();
 		if (ChoiceNum.equals("1")) {
@@ -78,7 +83,12 @@ public class PotionStore {
 		String ChoiceNum = "";
 		int price = 0;
 
-		System.out.println("1.하급 포션(30골드) \t2.중급 포션(50골드) \t3.상급 포션(100골드) \t4.나가기");
+		System.out.println("╔───────────────────────────────╗");
+		System.out.println("│1.하급 포션(체력 100회복): 30골드\t│");
+		System.out.println("│2.중급 포션(체력 300회복): 50골드\t│");
+		System.out.println("│3.상급 포션(체력 500회복): 100골드\t│");
+		System.out.println("│4.나가기\t\t\t\t│");
+		System.out.println("╚───────────────────────────────╝");
 		System.out.print("선택: ");
 		ChoiceNum = scan.nextLine();
 		if (ChoiceNum.equals("1")) {
