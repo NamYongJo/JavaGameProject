@@ -1,8 +1,8 @@
-package Characters;
+package characters.monster;
 
-public class Goblin extends Monster {
+public class Orc extends Monster {
 
-	public Goblin(String name, int hp, int mp, int level, int power, int def, int money, int exp) {
+	public Orc(String name, int hp, int mp, int level, int power, int def, int money, int exp) {
 		this.name = name;
 		this.hp = hp;
 		this.mp = mp;

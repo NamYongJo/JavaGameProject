@@ -1,4 +1,4 @@
-package Characters;
+package characters.monster;
 
 public class Skeleton extends Monster {
 

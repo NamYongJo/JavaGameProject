@@ -1,4 +1,6 @@
-package Characters;
+package characters.monster;
+
+import characters.Character;
 
 public class Monster extends Character {
 

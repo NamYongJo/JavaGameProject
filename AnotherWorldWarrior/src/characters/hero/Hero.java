@@ -1,7 +1,9 @@
-package Characters;
+package characters.hero;
 
 import java.util.HashMap;
 import java.util.Scanner;
+
+import characters.Character;
 
 public class Hero extends Character {
 

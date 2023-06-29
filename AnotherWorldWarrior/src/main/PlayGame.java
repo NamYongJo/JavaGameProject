@@ -2,15 +2,15 @@ package main;
 
 import java.util.Scanner;
 
-import Characters.BossMonster;
-import Characters.Goblin;
-import Characters.Hero;
-import Characters.Imp;
-import Characters.Lucifer;
-import Characters.Monster;
-import Characters.Orc;
-import Characters.Skeleton;
-import Characters.Slime;
+import characters.bossMonster.BossMonster;
+import characters.bossMonster.Lucifer;
+import characters.hero.Hero;
+import characters.monster.Goblin;
+import characters.monster.Imp;
+import characters.monster.Monster;
+import characters.monster.Orc;
+import characters.monster.Skeleton;
+import characters.monster.Slime;
 import store.PotionStore;
 
 public class PlayGame {
@@ -20,9 +20,6 @@ public class PlayGame {
 		// 선택 변수
 		String choiceNum = "";
 		String tempNum = "";
-
-		// boss 클리어 변수
-		boolean bossKill = false;
 
 		// 내 캐릭터 스탯 변수 선언
 		String name = ""; // 이름
@@ -129,7 +126,8 @@ public class PlayGame {
 					System.out.println("⚔️ 전투 상대 ⚔️");
 					monster.showInfo();
 				} else if (choiceNum.equals("6")) {
-					bossMonster = new Lucifer("마왕 루시퍼(보스)", 4000, 50, 30, 50, 30, 5000, 5000);
+//					bossMonster = new Lucifer("루시퍼", 4000, 50, 30, 50, 30, 5000, 5000);
+					bossMonster = new Lucifer("루시퍼", 50, 50, 30, 50, 30, 5000, 5000);
 					System.out.println("⚔️ 전투 상대 ⚔️");
 					bossMonster.showInfo();
 				} else if (choiceNum.equals("0")) {
@@ -162,7 +160,7 @@ public class PlayGame {
 								System.out.println(bossMonster.name + " 토벌 성공!");
 								hero.exp += bossMonster.exp;
 								hero.money += bossMonster.money;
-								bossKill = true;
+								bossMonster.gameEnd();
 								break;
 							}
 
@@ -247,14 +245,6 @@ public class PlayGame {
 				hero.LevelUp();
 			}
 
-			if (bossKill == true) {
-				System.out.println("╔───────────────────────────────╗");
-				System.out.println("│마왕 루시퍼가 힘을 잃어 봉인되었습니다.\t│");
-				System.out.println("│당신은 이 세계를 구한 영웅입니다!\t│");
-				System.out.println("│당신을 원래 세계로 보내드리겠습니다!\t│");
-				System.out.println("╚───────────────────────────────╝");
-				break;
-			}
 		}
 
 	}
